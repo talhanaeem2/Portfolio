@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import { memo } from "react";
 
 import AppStateInterface from "../store/interface/AppSateInterface";
 import MenuModal from "../components/menuModal";
@@ -13,4 +14,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export default memo(Home)
