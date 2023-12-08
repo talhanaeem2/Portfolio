@@ -1,7 +1,16 @@
 import { memo } from "react"
+import { useDispatch } from "react-redux"
 import { Link } from "react-router-dom"
 
+import { openModal } from "../store/slice"
+
 const Navbar = () => {
+    const dispatch = useDispatch()
+
+    const handleOpenModal = () => {
+        dispatch(openModal())
+    };
+
     return (
         <div className="p-8">
             <div className="flex justify-between items-center">
@@ -10,7 +19,7 @@ const Navbar = () => {
                         style={{ backgroundImage: "url('../src/assets/person.jpg')" }}></span>
                     Talha Naeem
                 </Link>
-                <Link to="#">
+                <Link to="#" onClick={handleOpenModal}>
                     <i className="relative inline-block group">
                         <span className="w-10 h-[2px] bg-white block mb-2 transition-all ease-out duration-200 group-hover:mb-[10px]"></span>
                         <span className="w-10 h-[2px] bg-white block mb-2 transition-all ease-out duration-200 group-hover:mb-[10px]"></span>

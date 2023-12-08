@@ -8,6 +8,7 @@ export default {
       white: "#ffffff",
       onyx: "#121212",
       silverChalice: "#aaaaaa",
+      blackOpacity: "rgba(18, 18, 18, 0.99)",
     },
     fontFamily: {
       poppins: ["poppins", "sans-serif"],
